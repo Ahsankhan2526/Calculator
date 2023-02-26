@@ -63,7 +63,7 @@ function gradeTeller(){
         spanElement.innerHTML = "You can not write number gretter than 100"
         
     }
-    if(userPercentage > 85){
+    else if(userPercentage > 85){
         spanElement.innerHTML = 'You have gotten A+ grade'
         spanElement.style.backgroundColor = "Green"
         spanElement.style.color = "white"
