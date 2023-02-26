@@ -1,0 +1,17 @@
+.BMI-btn {
+    padding: 5px 8px;
+    background-color: chocolate;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    border-radius: 8px;
+}
+
+.grade-teller-btn {
+    padding: 5px 8px;
+    background-color: forestgreen;
+    color: bisque;
+    font-weight: bold;
+    font-size: 22px;
+    border-radius: 8px;
+}

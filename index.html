@@ -5,13 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!--     
-<p> 1++ is called <b>post increment</b></p>
-<p> ++1 is called <b>pre increment</b></p>
-<p> 1-- is called <b>post decrement</b></p>
-<p> --1 is called <b>pre decrement</b></p> -->
+
 
  <h1>If you wanna print a table. click the button and write the number.</h1>
 <button onclick="printTable()">Print Table</button> 
@@ -20,14 +17,34 @@
 <br />
 <h1>If you wanna add, subtract, multiply or divide, click the button</h1>
 <button onclick="calculate()">Calculate + - * /</button>
-<!-- <br>
-<button onclick="minus()">Subtraction</button>
-<br>
-<button onclick="multiply()">Multiplication</button>
-<br>
-<button onclick="divide()">Division</button> -->
+<br />
+<br />
+<br />
+<div>
+    <h1>Grade teller:</h1>
+    <button class="grade-teller-btn" onclick="gradeTeller()">click</button>
+    <br />
+    <span class="grade"></span><br />
+</div>
 
 
+
+
+<div>
+    <h1>BMI (Body Mass Index)</h1>
+
+    <h4>
+        If your BMI is less than 18.5, it falls within the underweight range. <br />
+        If your BMI is 18.5 to &lt;25, it falls within the healthy weight range.  <br />
+        If your BMI is 25.0 to &lt;30, it falls within the overweight range. <br />
+        If your BMI is 30.0 or higher, it falls within the obesity range. <br />
+    </h4>
+        
+    
+    <button class="BMI-btn" onclick="BMI()">BMI Calculator</button>
+    <h2 class="abc"></h2>
+
+</div>
 
 
 
