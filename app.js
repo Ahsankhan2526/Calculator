@@ -1,45 +1,55 @@
 function printTable() {
-
-
+    var tableSpanElement = document.querySelector(".table-span");
     var num = +prompt("Write a number whose table you want to print.");
     var times = 1
-    document.write("<h2>" + num + " x " + times + " = " + num * times++ + "</h2>");
-    document.write("<h2>" + num + " x " + times + " = " + num * times++ + "</h2>");
-    document.write("<h2>" + num + " x " + times + " = " + num * times++ + "</h2>");
-    document.write("<h2>" + num + " x " + times + " = " + num * times++ + "</h2>");
-    document.write("<h2>" + num + " x " + times + " = " + num * times++ + "</h2>");
-    document.write("<h2>" + num + " x " + times + " = " + num * times++ + "</h2>");
-    document.write("<h2>" + num + " x " + times + " = " + num * times++ + "</h2>");
-    document.write("<h2>" + num + " x " + times + " = " + num * times++ + "</h2>");
-    document.write("<h2>" + num + " x " + times + " = " + num * times++ + "</h2>");
-    document.write("<h2>" + num + " x " + times + " = " + num * times++ + "</h2>");
+    var l1 = "<h2>" + num + " x " + times + " = " + num * times++ + "</h2>";
+    var l2 = "<h2>" + num + " x " + times + " = " + num * times++ + "</h2>";
+    var l3 = "<h2>" + num + " x " + times + " = " + num * times++ + "</h2>";
+    var l4 = "<h2>" + num + " x " + times + " = " + num * times++ + "</h2>";
+    var l5 = "<h2>" + num + " x " + times + " = " + num * times++ + "</h2>";
+    var l6 = "<h2>" + num + " x " + times + " = " + num * times++ + "</h2>";
+    var l7 = "<h2>" + num + " x " + times + " = " + num * times++ + "</h2>";
+    var l8 = "<h2>" + num + " x " + times + " = " + num * times++ + "</h2>";
+    var l9 = "<h2>" + num + " x " + times + " = " + num * times++ + "</h2>";
+    var l10 = "<h2>" + num + " x " + times + " = " + num * times++ + "</h2>";
+
+    tableSpanElement.innerHTML = l1+l2+l3+l4+l5+l6+l7+l8+l9+l10
 }
 
 
 
 
 function calculate() {
+    var DMASSpanElement = document.querySelector(".DMAS-span")
     var num1 = +prompt("Write 1st number.");
     var operator = prompt("Write operator" , "use only + - / *");
     var num2 = +prompt("Write 2nd number.");
+    DMASSpanElement.style.fontSize = "30px";
+    DMASSpanElement.style.backgroundColor = "darkgray";
+    DMASSpanElement.style.color = "green";
+    // DMASSpanElement.style.width = "500px";
+    // DMASSpanElement.innerHTML.style.paddingLeft = "10px";
+    
+
     if (operator === "+") {
         var add = (num1 + num2);
-        document.write("<h2>Addition of " + num1 + " and " + num2 + " is " + add + "</h2>")
+        // add.style.backgroundColor = "green" 
+        DMASSpanElement.innerHTML = "<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Addition of " + num1 + " and " + num2 + " is " + add + "</h2>"
     }
     else if (operator === "-"){
         var minus =(num1 - num2);
-        document.write("<h2>Subtraction of " + num1 + " and " + num2 + " is " + minus + "</h2>")
+        DMASSpanElement.innerHTML = "<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subtraction of " + num1 + " and " + num2 + " is " + minus + "</h2>"
     }
     else if (operator === "*" || operator === "x"){
         var multiply = (num1 * num2);
-        document.write("<h2>Multiplication of " + num1 + " and " + num2 + " is " + multiply + "</h2>")
+        DMASSpanElement.innerHTML = "<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multiplication of " + num1 + " and " + num2 + " is " + multiply + "</h2>"
     }
     else if (operator === "/"){
-        var divide = (num1 / num2);
-        document.write("<h2>Division of " + num1 + " and " + num2 + " is " + divide + "</h2>")
+        var divide = (num1 / num2).toFixed(2);
+        DMASSpanElement.innerHTML = "<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Division of " + num1 + " and " + num2 + " is " + divide + "</h2>"
     }
     else{
-        document.write("<h2>something went wrong !!!</h2>")
+        DMASSpanElement.innerHTML = "<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;something went wrong !!!</h2>"
     }
 }
 
@@ -113,24 +123,25 @@ function gradeTeller(){
 
 function BMI(){
     var UserHeight = +prompt("Write your height in Centimeters only.");
+    UserHeight = UserHeight/100
     var UserHeightSqr = UserHeight ** 2;
     var weightKG = +prompt("Write your age in kilograms.")
-    var BMIValue = weightKG/UserHeightSqr;
+    var BMIValue = (weightKG/UserHeightSqr).toFixed(2);
     var h2Element = document.querySelector(".abc");
 
 
     if(BMIValue >= 30){
-        h2Element.innerHTML = "Your BMI falls within the obesity range."
+        h2Element.innerHTML = "Your BMI is " + BMIValue + " and falls within the obesity range."
 
     }
     else if (BMIValue >=25){
-        h2Element.innerHTML = "Your BMI falls within the overweight range.";
+        h2Element.innerHTML = "Your BMI  is " + BMIValue + " and falls within the overweight range.";
     }
     else if (BMIValue >=18.5){
-        h2Element.innerHTML = "Your BMI falls within the healthy weight range.";
+        h2Element.innerHTML = "Your BMI  is " + BMIValue + " and falls within the healthy weight range.";
     }
     else {
-        h2Element.innerHTML = "Your BMI falls within the underweight range.";
+        h2Element.innerHTML = "Your BMI  is " + BMIValue + " and falls within the underweight range.";
     }
 
     // console.log(UserHeight);
