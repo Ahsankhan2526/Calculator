@@ -125,7 +125,7 @@ function BMI(){
     var UserHeight = +prompt("Write your height in Centimeters only.");
     UserHeight = UserHeight/100
     var UserHeightSqr = UserHeight ** 2;
-    var weightKG = +prompt("Write your age in kilograms.")
+    var weightKG = +prompt("Write your weight in kilograms.")
     var BMIValue = (weightKG/UserHeightSqr).toFixed(2);
     var h2Element = document.querySelector(".abc");
 
